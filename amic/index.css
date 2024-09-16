@@ -1,0 +1,30 @@
+.switch{
+    position:relative;
+    display: inline-block;
+    width:50px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50px;
+}
+.switch::after{
+    content:"";
+    position: absolute;
+    top:1px;
+    left:1px;
+    width:22px;
+    height: 22px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 50%;
+    transition:all 0.3s linear;
+
+}
+input[type="checkbox"]:checked + .switch:after{
+    translate:25px 0px;
+}
+input[type="checkbox"]:checked + .switch{
+background-color: blue;
+}
+.toggle{
+    display:none;
+}
